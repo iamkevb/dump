@@ -22,6 +22,9 @@ main {
 
 footer {
   background-color: var(--secondary-header);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 h1 {
