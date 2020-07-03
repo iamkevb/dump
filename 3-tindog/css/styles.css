@@ -10,6 +10,11 @@ h1 {
   font-size: 3.5rem;
   line-height: 1.5;
 }
+h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
 h3 {
   font-weight: 900;
   font-size: 1.5rem;
@@ -45,8 +50,7 @@ p {
 /* features section */
 
 #features {
-  width: 75%;
-  margin: 60px auto;
+  padding: 7% 15%;
 }
 .feature-box {
   text-align: center;
@@ -54,8 +58,29 @@ p {
 }
 .feature-img {
   color: #ef8172;
-  margin: 16px;
+  margin: 1rem;
 }
 .feature-img:hover {
   color: #ff4c86;
+}
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  color: whitesmoke;
+}
+.testimonial-img {
+  width: 10%;
+  border-radius: 50%;
+}
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 3%;
+}
+.press-img {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+.carousel-item {
+  padding: 7% 15%;
 }
