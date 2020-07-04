@@ -105,3 +105,19 @@ p {
 .pricing-col {
   padding: 3% 2%;
 }
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  padding: 60px;
+}
+.cta-title {
+  font-weight: 900;
+  color: white;
+}
+#footer {
+  padding: 80px;
+  text-align: center;
+}
+.social-icon {
+  margin: 10px;
+}
