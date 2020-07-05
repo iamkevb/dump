@@ -1,0 +1,30 @@
+/* multiple selectors */
+
+h1, h2, p {
+  color: red;
+}
+
+/* hierarchical selectors */
+
+/* Containers in the title element are red */
+#title .container {
+  color: red;
+}
+
+/* h1's inside a container are red */
+.container .h1 {
+  color: red;
+}
+
+/* combined selectors */
+selector1.selector2 {
+  color: red;
+}
+/* div with container class get color red, other containers don't */
+div.container {
+  color: red;
+}
+/* elements with both one and two class get color red */
+.one.two {
+  color: red;
+}
