@@ -16,6 +16,7 @@ function start() {
   nextSequence();
   playGamePattern();
   gameStarted = true;
+  updateGameTitle();
 }
 
 function playGamePattern() {
@@ -34,6 +35,7 @@ function nextSequence() {
 }
 
 function playButton(i) {
+  if (!gameStarted) { return; }
   $("#"+buttonColors[i]).fadeOut(100).fadeIn(100);
   sounds[i].play();
 }
@@ -55,12 +57,23 @@ function handleAction(e) {
 
 function addToGamePattern() {
   nextSequence();
+  updateGameTitle();
   playGamePattern();
 }
 
 function playLoser() {
   new Audio("sounds/wrong.mp3").play();
   gameStarted = false;
+  updateGameTitle();
+}
+
+function updateGameTitle() {
+  console.log("update game title " + gamePattern.length + " " + gameStarted);
+  if (!gameStarted) {
+    $("#level-title").text("Press Start");
+  } else  {
+    $("#level-title").text("Level " + gamePattern.length);
+  }
 }
 
 $("#start").click(() => start());
