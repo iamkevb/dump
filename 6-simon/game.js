@@ -14,6 +14,7 @@ function start() {
   if (gameStarted) { return; }
   gamePattern = [];
   nextSequence();
+  currentIndex = 0;
   playGamePattern();
   gameStarted = true;
   updateGameTitle();
