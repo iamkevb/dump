@@ -1,0 +1,12 @@
+<%- include partials/header %>
+<h1>hOmE</h1>
+<p><%= content %></p>
+
+<% posts.forEach((p) => { %>
+  <h1><%= p.title %></h1>
+  <p><%= p.brief() %></p>
+  <p><a href="/post/<%= p.slug %>">Read more...</a></p>
+<% }); %>
+
+<%- include partials/footer %>
+
