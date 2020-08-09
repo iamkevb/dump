@@ -4,12 +4,7 @@ import moment from "moment";
 export default function Footer() {
   return (
     <footer>
-      <p>{copyrightText()}</p>
+      <p>Copyright {moment().format("MMMM Do YYYY")}</p>
     </footer>
   );
-}
-
-function copyrightText() {
-  const date = moment().format('MMMM Do YYYY');
-  return `Copyright ${date}`;
 }
