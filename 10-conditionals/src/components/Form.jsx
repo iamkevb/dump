@@ -1,14 +1,18 @@
 import React from "react";
 
-function Form() {
+function Form(props) {
   return (
     <form className="form">
       <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
-      <input type="password" placeholder="Confirm Password" />
-      <button type="submit">Register</button>
+      {createInput("password", "Password")}
+      {!props.registered && createInput("password", "Confirm Password")}
+      <button type="submit">{props.registered ? "Login" : "Register"}</button>
     </form>
   );
+}
+
+function createInput(type, placeholder) {
+  return <input type={type} placeholder={placeholder} />;
 }
 
 export default Form;
